@@ -1,0 +1,93 @@
+.contenedor-politica {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15%;
+  font-weight: 500;
+}
+
+.contenedor-politica h2 {
+  color: var(--three-color);
+  font-weight: bold;
+}
+.contenedor-politica p {
+  text-align: justify;
+  color: var(--two-color);
+  line-height: 18px;
+  font-size: 1rem;
+}
+
+.contenedor-data p{
+  padding-right: 10%;
+}
+h2{
+  padding: 10% 0% 8% 0%;
+}
+
+/*----------------------MODELO ADAPTATIVO TABLET-------------------------*/
+@media screen and (min-width: 768px) {
+  
+  p.pNormas{
+    padding-right: 15%;
+  }
+  p.pSyS{
+    padding-right: 15%;
+  }
+  p.pCancelacion{
+    padding-right: 5%;
+  }
+  .contenedor-politica div {
+    text-align: justify;
+    width: 100%;
+    padding-top: 2%;
+  }
+  .contenedor-politica{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5%;
+  }
+}
+/*----------------------MODELO ADAPTATIVO MOBILE-------------------------*/
+
+@media screen and (min-width: 992px) {
+  .contenedor-politica {
+    flex-direction: column;
+  }
+  .contenedor-politica div {
+    width: 100%;
+  
+  }
+
+  .contenedor-politica{
+    display: flex;
+    flex-direction: row;
+  }
+  div.pol1{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+  }
+  div.pol2{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 60%;
+  }
+  h2{
+    padding: 0;
+  }
+  .contenedor-data p{
+    padding-top: 6%;
+  }
+  p.pCancelacion
+  {
+    padding-top: 3%;
+    padding-right: 2%;
+  }
+  p.pNormas{
+    padding-right: 30%;
+  }
+  p.pSyS{
+    padding-right: 30%;
+  }
+}

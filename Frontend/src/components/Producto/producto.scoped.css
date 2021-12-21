@@ -1,0 +1,233 @@
+/***** BLOQUE POLITICAS *****/
+
+div.contenedor-politicas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 40px;
+}
+
+/* El título de los bloques muestra la línea azul de borde a borde en Mobile en página de productos */
+p.titulo {
+  margin: 0px -10px 20px;
+  padding: 10px 10px 10px 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--two-color);
+
+  margin-left: calc(var(--margin-mobile) * -1);
+  margin-right: calc(var(--margin-mobile) * -1);
+  padding-left: var(--margin-mobile);
+  padding-right: var(--margin-mobile);
+}
+
+p.subrayado {
+  border-bottom: 1px solid;
+  border-color: var(--one-color);
+}
+
+/*------------ESTILOS CARD CON SLIDER--------------------*/
+
+.fa-chevron-left {
+  font-size: 34px;
+}
+
+.compartir {
+  display: flex;
+  padding-left: 43px;
+  gap: 18px;
+  padding-top: 19px;
+  padding-bottom: 19px;
+}
+
+.compartir path {
+  color: var(--three-color);
+  font-size: 18px;
+}
+
+.contenedorImagenes {
+  display: none;
+  gap: 13px;
+}
+
+.main {
+  width: 49%;
+  height: 441px;
+  border-radius: 8px;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imagenesInternas {
+  width: 51%;
+  height: 441px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.imagenesInternas .img {
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imgTop {
+  /* position: relative;
+  top: 13px; */
+}
+
+.tituloCaract {
+  color: var(--two-color);
+  font-size: 24px;
+  line-height: 28px;
+  padding-top: 40px;
+  text-align: justify;
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+.imagenesInternas a {
+  display: flex;
+  justify-content: flex-end;
+  bottom: 40px;
+  right: 20px;
+  z-index: 100;
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.modal-background {
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #383b58;
+  opacity: 0.95;
+  backdrop-filter: blur(500px);
+  z-index: 1;
+}
+
+.modal-background::before {
+  /* content: "x"; */
+  /* color: #fff;
+  display: inline-block;
+  padding-right: auto;
+  font-size: 30px;
+  visibility: visible;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3% 0% 0% 30%; */
+  /* padding-top: 3%; */
+}
+div.cerrarModal{
+  position: absolute;
+  display: flex;
+  justify-self: flex-start;
+  padding: 1% 0% 0% 42%;
+  color: white;
+  font-size: 25px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+
+.modal-card {
+  margin: 0 auto;
+  display: block;
+  width: 45%;
+  border-radius: 5px;
+  opacity: 1;
+  padding-top: 10%;
+}
+.carousel-container {
+  opacity: 1;
+}
+.descripcion p.texto {
+  text-align: justify;
+  font-weight: 500;
+  color: var(--three-color);
+  line-height: 18px;
+  font-size: 14px;
+}
+
+/*----------------------MODELO ADAPTATIVO TABLET-------------------------*/
+@media screen and (min-width: 768px) {
+  /* El título de los bloques muestra la línea azul de borde a borde en Tablet en página de productos */
+  p.titulo {
+    margin-left: calc(var(--margin-tablet) * -1);
+    margin-right: calc(var(--margin-tablet) * -1);
+    padding-left: var(--margin-tablet);
+    padding-right: var(--margin-tablet);
+  }
+  .contenedorImagenes {
+    display: none;
+  }
+}
+
+/*----------------------MODELO ADAPTATIVO DESKTOP-------------------------*/
+
+@media screen and (min-width: 992px) {
+  /*  Politicas ordenadas en 3 columnas en la página de productos */
+  .distancia p {
+    width: 90%;
+  }
+
+  .contenedorImagenes {
+    display: flex;
+  }
+
+  g .calificacionEstrellas {
+    width: 140px;
+  }
+
+  .metros {
+    display: none;
+  }
+
+  .linea1Tabletb {
+    width: 100%;
+  }
+
+  .linea1Tablet {
+    width: 100%;
+  }
+
+  .linea1 p,
+  .linea2 p {
+    font-size: 1.1rem;
+  }
+
+  .linea2 {
+    margin-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .compartir {
+    padding-left: 10px;
+  }
+
+  .descripcion p {
+    padding-right: 0px;
+  }
+
+  /* El título de los bloques muestra la línea azul de borde a borde (hasta max-width) en Desktop en página de productos */
+  p.titulo {
+    margin-left: calc(var(--margin-desktop) * -1);
+    margin-right: calc(var(--margin-desktop) * -1);
+    padding-left: var(--margin-desktop);
+    padding-right: var(--margin-desktop);
+  }
+  .modal-card{
+    opacity: 1;
+  }
+}
